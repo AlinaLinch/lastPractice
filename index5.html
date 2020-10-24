@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice_5_Linchitskaya</title>
+    <script> 
+    // вывести числа перебором от 1 до ... по десять в ряд.
+
+    let n = 100; //общее число цифр 99 = n+1
+    let t = 10; //число цифр в ряду
+    
+
+    for (let i=0; i<t; i++) {
+            for (let j=1; j<=t; j++) {
+                if (i==0 && j<t)
+                {document.write (i);
+                document.write (j+", ");}
+            else {if  (i*10+j==n) {break;}
+                else {document.write (i*10+j+", ");}}
+            }
+            document.write ("<br/>");
+    }
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
