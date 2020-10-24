@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice_4_Linchitskaya</title>
+    <script> 
+     let arr3 = [
+      [4,-6,22,2],
+      [8,34,-12,4],
+      [6,3,21,56],
+      [-2,-33,44,1]
+    ]
+
+    // Смотря на индекс родительского масива доставать количество элементов дочернего
+    // результат выдода в console.log
+    //ничего
+    //8
+    //6,3
+    //-2,-33,44
+
+    for (let i=0; i<4; i++) {
+        if (i==0) {document.write ("Ничего");}
+        else { for (let j=1; j<=i; j++) 
+                    {document.write (arr3[i][j-1]+", ");}
+            }
+        document.write ("<br/>");
+    }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
