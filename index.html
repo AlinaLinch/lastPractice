@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice_6_Linchitskaya</title>
+    <script> 
+
+    // 120 квартир поъезда (по 30 квартир) 6 этажей по 5-ть квартир на этаже
+    // вводим номер квартиры получаем ответ в каком парадном она находится 
+    // вводим номер квартиры получаем ответ в каком парадном и этаж где она находится 
+
+    let flatAll = 120;
+
+    let flatFront = 30;
+
+    let k =  flatAll/flatFront; //количество подъездов (парадных)
+
+    let floors = 6; //количество этажей
+
+    let z = flatFront/floors; //количество квартир на этаже
+
+    let flat = +prompt ("Введите номер квартиры, от 1 до 120");
+
+    if (flat>0 && flat<=flatAll) {
+                document.write ("Номер квартиры: "+flat+"; <br/>");
+        for (var i=1; i<=k; i++)
+
+                if (flatFront*i>=flat) {
+                    document.write ("<p>Парадное: "+i+"; <br/>");
+                        for (let j=1; j<=floors; j++) {
+                            if ((i-1)*flatFront+j*z>=flat) {
+                            document.write ("<p>Этаж: "+j+"; <br/>");
+                            break;
+                                                         }
+                                            }
+                    break;
+                }}
+    else {document.write ("Введенное значение не соотвествует условию");}
+
+    
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
